@@ -11,7 +11,17 @@ shortBtn.addEventListener("click", () => {
 
   fetch(apiUrl)
     .then((response) => response.text())
-    .then((data) => (shortUrlTextarea.value = data))
+    .then((data) => {
+      shortUrlTextarea.value = data;
+
+      // Hacer clic en el área de texto abrirá la URL en una nueva ventana
+      shortUrlTextarea.style.cursor = "pointer"; // Cambiar el cursor a puntero
+
+      // Agregar el evento para abrir la URL en una nueva ventana
+      shortUrlTextarea.addEventListener("click", () => {
+        window.open(data, "_blank"); // Abrir la URL acortada en una nueva ventana
+      });
+    })
     .catch(
       (error) =>
         (shortUrlTextarea.value = "Error: Unable to shorten this URL" + error)
