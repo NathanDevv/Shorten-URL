@@ -1,5 +1,6 @@
 const shortBtn = document.getElementById("short-btn");
 const reloadBtn = document.getElementById("reload-btn");
+const copyBtn = document.getElementById("copy-btn");
 
 shortBtn.addEventListener("click", () => {
   const longUrl = document.getElementById("longUrl").value;
@@ -10,13 +11,7 @@ shortBtn.addEventListener("click", () => {
 
   fetch(apiUrl)
     .then((response) => response.text())
-    .then((data) => {
-      shortUrlTextarea.value = data;
-      shortUrlTextarea.style.cursor = "pointer"; // Cambia el cursor a un puntero
-      shortUrlTextarea.addEventListener("click", () => {
-        window.open(data, "_blank"); // Abre en una nueva pestaña
-      });
-    })
+    .then((data) => (shortUrlTextarea.value = data))
     .catch(
       (error) =>
         (shortUrlTextarea.value = "Error: Unable to shorten this URL" + error)
@@ -24,3 +19,13 @@ shortBtn.addEventListener("click", () => {
 });
 
 reloadBtn.addEventListener("click", () => location.reload());
+
+copyBtn.addEventListener("click", () => {
+  const shortUrlTextarea = document.getElementById("shortUrl");
+
+  // Seleccionar y copiar el texto del área de texto
+  shortUrlTextarea.select();
+  document.execCommand("copy");
+
+  alert("URL copiada al portapapeles!");
+});

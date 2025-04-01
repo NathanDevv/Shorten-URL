@@ -79,6 +79,23 @@ button:hover {
   color: #000;
 }
 
+#copy-btn {
+  width: 100%;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+#copy-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 .buttons button:hover i {
   color: #000;
 }
