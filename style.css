@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+}
+
+.wrapper {
+  background: linear-gradient(125.68deg, #63c1e9, #26718d, #080858);
+  border-radius: 10px;
+  padding: 18px 25px;
+  border: 1.5px solid #fff;
+  text-align: center;
+  min-height: 400px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+label {
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 10px 0;
+  display: block;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  margin-bottom: 15px;
+  font-size: 15px;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 500;
+}
+
+input::placeholder {
+  color: #d8d8d8;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  width: 100%;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 8px;
+  background-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.buttons button:hover i {
+  color: #000;
+}
+
+textarea {
+  resize: none;
+}
+
+small {
+  font-size: 10px;
+  font-weight: 500;
+}
